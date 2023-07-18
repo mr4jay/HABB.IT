@@ -1,23 +1,17 @@
-// JavaScript Code (script.js)
-
-// Function to toggle the visibility of documentation steps on clicking the phase tile
-function toggleDetails(phaseNumber) {
-  const phaseDetails = document.getElementById(`phase${phaseNumber}-details`);
-  const isActive = phaseDetails.classList.contains("active");
-
-  // Hide all other active phase details
+function toggleDetails(phaseId) {
+  const phaseDetails = document.getElementById(`phase${phaseId}-details`);
+  const currentDisplay = phaseDetails.style.display;
   const allPhaseDetails = document.querySelectorAll(".phase-details");
-  allPhaseDetails.forEach(details => details.classList.remove("active"));
 
-  // Show or hide the clicked phase details
-  if (!isActive) {
-    phaseDetails.classList.add("active");
-    animateTypingEffect(phaseDetails);
+  allPhaseDetails.forEach((details) => (details.style.display = "none"));
+
+  if (currentDisplay === "none" || currentDisplay === "") {
+    phaseDetails.style.display = "block";
+    typeDocumentationSteps(phaseDetails);
   }
 }
 
-// Function to simulate typing animation for documentation steps
-function animateTypingEffect(phaseDetails) {
+function typeDocumentationSteps(phaseDetails) {
   const documentationSteps = phaseDetails.querySelectorAll("ol li");
   let stepIndex = 0;
 
@@ -33,12 +27,8 @@ function animateTypingEffect(phaseDetails) {
 }
 
 // Add event listeners to each phase tile
-const phaseTiles = document.querySelectorAll(".project-phase");
-phaseTiles.forEach((tile, index) => {
-  tile.addEventListener("click", () => toggleDetails(index + 1));
+const projectPhases = document.querySelector(".project-phases");
+const phaseTiles = projectPhases.querySelectorAll(".project-phase");
+phaseTiles.forEach((phaseTile, index) => {
+  phaseTile.addEventListener("click", () => toggleDetails(index + 1));
 });
-
-// Initialize by showing the first phase details
-const initialPhase = document.getElementById("phase1-details");
-initialPhase.classList.add("active");
-animateTypingEffect(initialPhase);
