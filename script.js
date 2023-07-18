@@ -1,5 +1,10 @@
-function saveData(phase) {
-  const form = document.querySelector(`.${phase}-form`);
+function toggleDetails(phaseNumber) {
+  const phaseDetails = document.getElementById(`phase${phaseNumber}-details`);
+  phaseDetails.classList.toggle('show');
+}
+
+function saveCustomSteps(phase) {
+  const form = document.getElementById(`${phase}-form`);
   const formData = new FormData(form);
   const data = {};
   formData.forEach((value, key) => {
@@ -16,7 +21,7 @@ function saveData(phase) {
   })
   .then(response => response.json())
   .then(result => {
-    alert(`Data saved for ${phase}`);
+    alert(`Custom steps saved for ${phase}`);
     form.reset();
   })
   .catch(error => {
