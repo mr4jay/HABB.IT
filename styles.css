@@ -1,48 +1,158 @@
-/* Add your CSS styles here */
-/* Phase tiles */
-.project-phase {
-  background-color: #007BFF;
-  padding: 20px;
-  margin-bottom: 20px;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
   color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav {
+  background-color: #444;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff9900;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.project-phases {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.project-phase {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
   cursor: pointer;
-  border-radius: 8px;
-  transition: transform 0.2s ease;
+  position: relative;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-phase:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-/* Documentation Steps */
+.project-phase h3 {
+  font-size: 24px;
+}
+
+.project-phase p {
+  font-size: 14px;
+  color: #666;
+}
+
 .phase-details {
   display: none;
-  background-color: #fff;
-  color: #000;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 2;
+  text-align: left;
+  overflow-y: scroll;
 }
 
-.project-phase.active .phase-details {
-  display: block;
+.phase-details h4 {
+  font-size: 18px;
 }
 
-/* Animation for documentation steps */
-.typing {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 0;
-  animation: typing 2s steps(30, end);
+.phase-details ol {
+  list-style: none;
+  padding-left: 20px;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
+.phase-details li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.phase-details li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #ff9900;
+  border-radius: 50%;
+  animation: blink-caret 0.75s infinite;
+}
+
+@keyframes blink-caret {
+  50% {
+    opacity: 0;
   }
-  to {
-    width: 100%;
+}
+
+.doc-btn {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #ff9900;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.doc-btn:hover {
+  background-color: #ff7a00;
+}
+
+@media (max-width: 768px) {
+  .project-phases {
+    grid-template-columns: 1fr;
   }
 }
