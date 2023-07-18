@@ -1,15 +1,14 @@
 body {
-  background-color: #141414;
-  color: #fff;
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+  color: #FFFFFF;
+  background-color: #1A1A1A;
 }
 
 header {
-  background-color: #69c4c6;
-  text-align: center;
-  padding: 1rem 0;
+  background-color: #141414;
+  padding: 20px;
 }
 
 h1 {
@@ -17,12 +16,12 @@ h1 {
 }
 
 nav {
-  background-color: #1a1a1a;
-  padding: 0.5rem;
+  background-color: #141414;
+  padding: 10px;
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
@@ -30,74 +29,87 @@ ul {
 }
 
 li {
-  margin: 0 1rem;
+  margin: 0 10px;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border: 2px solid #69c4c6;
-  border-radius: 10px;
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
 a:hover {
-  background-color: #69c4c6;
-  color: #fff;
+  color: #69C4C6;
 }
 
 main {
-  padding: 2rem;
+  padding: 20px;
 }
 
 h2 {
-  color: #69c4c6;
+  color: #69C4C6;
+  margin-bottom: 20px;
 }
 
 .project-phases {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-gap: 20px;
 }
 
 .project-phase {
-  background-color: #1a1a1a;
-  padding: 1rem;
+  padding: 20px;
   text-align: center;
-  border-radius: 10px;
+  background-color: #69C4C6;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.project-phase:hover {
-  background-color: #69c4c6;
+.project-phase h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.project-phase p {
+  margin: 10px 0;
 }
 
 .phase-details {
-  background-color: #1a1a1a;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  margin-top: 0.5rem;
+  background-color: #1A1A1A;
+  padding: 20px;
+  border-radius: 5px;
+  display: none;
+}
+
+.phase-details h4 {
+  color: #69C4C6;
+  margin-top: 0;
+}
+
+.phase-details ol {
+  padding-left: 20px;
+}
+
+.doc-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #69C4C6;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.doc-btn:hover {
+  background-color: #1A1A1A;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #141414;
 }
 
 .hidden {
   display: none;
 }
-
-.doc-btn {
-  display: block;
-  margin-top: 1rem;
-  background-color: #69c4c6;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 10px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.doc-btn:hover {
-  background-color: #449a9c;
-}
-
