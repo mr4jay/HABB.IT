@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conversation Project Plan</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Additional CSS for typing effect */
+    .typing::after {
+      content: '|';
+      display: inline-block;
+      animation: blink-caret 0.75s infinite;
+    }
+
+    @keyframes blink-caret {
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -49,11 +63,11 @@
         <div class="phase-details" id="phase1-details" style="display: none;">
           <h4>Documentation Steps:</h4>
           <ol>
-            <li>Develop a comprehensive project plan outlining tasks, timelines, and resources.</li>
-            <li>Conduct in-depth research on technology, market trends, and user preferences.</li>
-            <li>Create initial documentation, including project scope, goals, and requirements.</li>
-            <li>Identify potential risks and mitigation strategies.</li>
-            <li>Formulate a project budget and resource allocation plan.</li>
+            <li>Develop a comprehensive project plan outlining tasks, timelines, and resources.<span class="typing"></span></li>
+            <li>Conduct in-depth research on technology, market trends, and user preferences.<span class="typing"></span></li>
+            <li>Create initial documentation, including project scope, goals, and requirements.<span class="typing"></span></li>
+            <li>Identify potential risks and mitigation strategies.<span class="typing"></span></li>
+            <li>Formulate a project budget and resource allocation plan.<span class="typing"></span></li>
           </ol>
           <a href="phase1_documentation.pdf" target="_blank" class="doc-btn">View Documentation</a>
         </div>
@@ -65,11 +79,11 @@
         <div class="phase-details" id="phase2-details" style="display: none;">
           <h4>Documentation Steps:</h4>
           <ol>
-            <li>Finalize specifications for the crypto token, including token type and supply.</li>
-            <li>Design the token contract architecture and functionality.</li>
-            <li>Implement security measures to protect token holders.</li>
-            <li>Conduct internal code reviews and testing.</li>
-            <li>Deploy the token on the mainnet and verify the contract.</li>
+            <li>Finalize specifications for the crypto token, including token type and supply.<span class="typing"></span></li>
+            <li>Design the token contract architecture and functionality.<span class="typing"></span></li>
+            <li>Implement security measures to protect token holders.<span class="typing"></span></li>
+            <li>Conduct internal code reviews and testing.<span class="typing"></span></li>
+            <li>Deploy the token on the mainnet and verify the contract.<span class="typing"></span></li>
           </ol>
           <a href="phase2_documentation.pdf" target="_blank" class="doc-btn">View Documentation</a>
         </div>
