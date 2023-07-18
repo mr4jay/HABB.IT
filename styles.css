@@ -1,138 +1,48 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-
-nav {
-  background-color: #444;
-  padding: 10px;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav li {
-  margin: 0 10px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #ccc;
-}
-
-main {
-  padding: 20px;
-}
-
-h2 {
-  margin-top: 0;
-  padding-bottom: 10px;
-}
-
-.project-phases {
-  display: flex;
-  flex-wrap: wrap;
-}
-
+/* Add your CSS styles here */
+/* Phase tiles */
 .project-phase {
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #007BFF;
   padding: 20px;
-  margin: 10px;
+  margin-bottom: 20px;
+  color: #fff;
   cursor: pointer;
-  transition: all 0.3s;
-  border-radius: 5px;
-  width: calc(33.33% - 20px);
-  text-align: center;
-  position: relative;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
 }
 
 .project-phase:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.project-phase h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.project-phase p {
-  font-size: 14px;
-}
-
+/* Documentation Steps */
 .phase-details {
   display: none;
   background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 20px;
+  color: #000;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin-top: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  width: 300px;
-  text-align: left;
-  font-size: 14px;
 }
 
-.doc-btn {
+.project-phase.active .phase-details {
   display: block;
-  text-align: center;
-  margin-top: 10px;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
 }
 
-.doc-btn:hover {
-  background-color: #444;
-}
-
-/* Tooltips */
-.project-phase[data-tooltip]::before {
-  content: attr(data-tooltip);
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 12px;
+/* Animation for documentation steps */
+.typing {
+  display: inline-block;
   white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  overflow: hidden;
+  width: 0;
+  animation: typing 2s steps(30, end);
 }
 
-.project-phase:hover[data-tooltip]::before {
-  opacity: 1;
-  visibility: visible;
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
