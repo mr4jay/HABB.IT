@@ -1,29 +1,23 @@
-function toggleDetails(phaseId) {
-  const phaseDetails = document.getElementById(phaseId + '-details');
-  const stepsElement = document.getElementById(phaseId + '-steps');
-  const steps = getStepsForPhase(phaseId); // Replace this with your data retrieval logic
-
-  if (phaseDetails.classList.contains('hidden')) {
-    phaseDetails.classList.remove('hidden');
-    stepsElement.innerHTML = ''; // Clear existing steps
-    steps.forEach((step, index) => {
-      setTimeout(() => {
-        stepsElement.innerHTML += `<li class="typing-animation">${index + 1}. ${step}</li>`;
-      }, index * 1500); // Delay of 1.5 seconds between each step
-    });
+function toggleDetails(phaseNumber) {
+  var details = document.getElementById('phase' + phaseNumber + '-details');
+  if (details.style.display === 'none') {
+    details.style.display = 'block';
+    typeDocumentationSteps(phaseNumber);
   } else {
-    phaseDetails.classList.add('hidden');
+    details.style.display = 'none';
   }
 }
 
-function getStepsForPhase(phaseId) {
-  // Replace this with your logic to retrieve documentation steps for each phase
-  // For now, return a placeholder list of steps
-  if (phaseId === 1) {
-    return ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5'];
-  } else if (phaseId === 2) {
-    return ['Step A', 'Step B', 'Step C', 'Step D', 'Step E'];
-  } else {
-    return []; // Return an empty array for other phases
+function typeDocumentationSteps(phaseNumber) {
+  var steps = document.querySelectorAll('#phase' + phaseNumber + '-details ol li');
+  var index = 0;
+  function type() {
+    if (index < steps.length) {
+      var step = steps[index];
+      step.style.display = 'list-item';
+      index++;
+      setTimeout(type, 100); // Adjust the typing speed here (milliseconds)
+    }
   }
+  type();
 }
