@@ -46,52 +46,63 @@
           <h3>Phase 1</h3>
           <p>Duration: [Start Date] - [End Date]</p>
         </div>
-        <div class="phase-details" id="phase1-details">
+        <div class="phase-details hidden" id="phase1-details">
           <h4>Documentation Steps:</h4>
-          <ol>
-            <li>Develop a comprehensive project plan outlining tasks, timelines, and resources.</li>
-            <li>Conduct in-depth research on technology, market trends, and user preferences.</li>
-            <li>Create initial documentation, including project scope, goals, and requirements.</li>
-            <li>Identify potential risks and mitigation strategies.</li>
-            <li>Formulate a project budget and resource allocation plan.</li>
-          </ol>
+          <ol id="phase1-steps"></ol>
           <a href="phase1_documentation.pdf" target="_blank" class="doc-btn">View Documentation</a>
-          <form class="custom-steps-form" id="phase1-form">
-            <label for="phase1-step1">Custom Step 1:</label>
-            <input type="text" id="phase1-step1" name="phase1-step1" required>
-            <label for="phase1-step2">Custom Step 2:</label>
-            <input type="text" id="phase1-step2" name="phase1-step2" required>
-            <!-- Add more input fields for Phase 1 custom steps -->
-            <button type="button" onclick="saveCustomSteps('phase1')">Save Custom Steps</button>
-          </form>
         </div>
 
         <div class="project-phase" data-tooltip="Phase 2: Crypto Token Development" onclick="toggleDetails(2)">
           <h3>Phase 2</h3>
           <p>Duration: [Start Date] - [End Date]</p>
         </div>
-        <div class="phase-details" id="phase2-details">
+        <div class="phase-details hidden" id="phase2-details">
           <h4>Documentation Steps:</h4>
-          <ol>
-            <li>Finalize specifications for the crypto token, including token type and supply.</li>
-            <li>Design the token contract architecture and functionality.</li>
-            <li>Implement security measures to protect token holders.</li>
-            <li>Conduct internal code reviews and testing.</li>
-            <li>Deploy the token on the mainnet and verify the contract.</li>
-          </ol>
+          <ol id="phase2-steps"></ol>
           <a href="phase2_documentation.pdf" target="_blank" class="doc-btn">View Documentation</a>
-          <form class="custom-steps-form" id="phase2-form">
-            <label for="phase2-step1">Custom Step 1:</label>
-            <input type="text" id="phase2-step1" name="phase2-step1" required>
-            <label for="phase2-step2">Custom Step 2:</label>
-            <input type="text" id="phase2-step2" name="phase2-step2" required>
-            <!-- Add more input fields for Phase 2 custom steps -->
-            <button type="button" onclick="saveCustomSteps('phase2')">Save Custom Steps</button>
-          </form>
         </div>
 
         <!-- Add more phases here -->
-        
+        <div class="project-phase" data-tooltip="Phase 3: User Authentication and Wallet Creation" onclick="toggleDetails(3)">
+          <h3>Phase 3</h3>
+          <p>Duration: [Start Date] - [End Date]</p>
+        </div>
+        <div class="phase-details hidden" id="phase3-details">
+          <h4>Documentation Steps:</h4>
+          <ol id="phase3-steps"></ol>
+          <a href="phase3_documentation.pdf" target="_blank" class="doc-btn">View Documentation</a>
+        </div>
+
+        <div class="project-phase" data-tooltip="Phase 4: Cryptocurrency Exchange Integration" onclick="toggleDetails(4)">
+          <h3>Phase 4</h3>
+          <p>Duration: [Start Date] - [End Date]</p>
+        </div>
+        <div class="phase-details hidden" id="phase4-details">
+          <h4>Documentation Steps:</h4>
+          <ol id="phase4-steps"></ol>
+          <a href="phase4_documentation.pdf" target="_blank" class="doc-btn">View Documentation</a>
+        </div>
+
+        <div class="project-phase" data-tooltip="Phase 5: Stock Market Data Integration" onclick="toggleDetails(5)">
+          <h3>Phase 5</h3>
+          <p>Duration: [Start Date] - [End Date]</p>
+        </div>
+        <div class="phase-details hidden" id="phase5-details">
+          <h4>Documentation Steps:</h4>
+          <ol id="phase5-steps"></ol>
+          <a href="phase5_documentation.pdf" target="_blank" class="doc-btn">View Documentation</a>
+        </div>
+
+        <div class="project-phase" data-tooltip="Phase 6: Testing and Quality Assurance" onclick="toggleDetails(6)">
+          <h3>Phase 6</h3>
+          <p>Duration: [Start Date] - [End Date]</p>
+        </div>
+        <div class="phase-details hidden" id="phase6-details">
+          <h4>Documentation Steps:</h4>
+          <ol id="phase6-steps"></ol>
+          <a href="phase6_documentation.pdf" target="_blank" class="doc-btn">View Documentation</a>
+        </div>
+
       </div>
     </section>
   </main>
