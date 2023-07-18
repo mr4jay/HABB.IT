@@ -1,15 +1,15 @@
 body {
+  background-color: #141414;
+  color: #fff;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #141414;
-  color: #ffffff;
 }
 
 header {
   background-color: #69c4c6;
-  padding: 10px;
   text-align: center;
+  padding: 1rem 0;
 }
 
 h1 {
@@ -17,11 +17,11 @@ h1 {
 }
 
 nav {
-  background-color: #69c4c6;
-  padding: 10px;
+  background-color: #1a1a1a;
+  padding: 0.5rem;
 }
 
-nav ul {
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -29,22 +29,25 @@ nav ul {
   justify-content: center;
 }
 
-nav li {
-  margin-right: 20px;
+li {
+  margin: 0 1rem;
 }
 
-nav a {
+a {
   text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: 2px solid #69c4c6;
+  border-radius: 10px;
 }
 
-nav a:hover {
-  color: #ff1493;
+a:hover {
+  background-color: #69c4c6;
+  color: #fff;
 }
 
 main {
-  padding: 20px;
+  padding: 2rem;
 }
 
 h2 {
@@ -53,51 +56,48 @@ h2 {
 
 .project-phases {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
 }
 
 .project-phase {
   background-color: #1a1a1a;
-  padding: 20px;
+  padding: 1rem;
+  text-align: center;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: background-color 0.3s;
 }
 
 .project-phase:hover {
-  transform: scale(1.05);
+  background-color: #69c4c6;
 }
 
 .phase-details {
   background-color: #1a1a1a;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 0.5rem;
+}
+
+.hidden {
   display: none;
-}
-
-.phase-details.show {
-  display: block;
-}
-
-.phase-details h4 {
-  color: #69c4c6;
 }
 
 .doc-btn {
   display: block;
-  margin-top: 10px;
-  color: #ffffff;
+  margin-top: 1rem;
   background-color: #69c4c6;
-  padding: 8px 15px;
-  border-radius: 5px;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
   text-align: center;
   text-decoration: none;
-  font-weight: bold;
 }
 
-footer {
-  background-color: #1a1a1a;
-  padding: 10px;
-  text-align: center;
+.doc-btn:hover {
+  background-color: #449a9c;
 }
+
