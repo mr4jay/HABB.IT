@@ -1,8 +1,11 @@
 function toggleDetails(phaseNumber) {
   const phaseDetails = document.getElementById(`phase${phaseNumber}-details`);
-  if (phaseDetails.style.display === "block") {
-    phaseDetails.style.display = "none";
+  const allPhaseDetails = document.querySelectorAll('.phase-details');
+
+  if (phaseDetails.style.display === 'block') {
+    phaseDetails.style.display = 'none';
   } else {
-    phaseDetails.style.display = "block";
+    allPhaseDetails.forEach((details) => (details.style.display = 'none'));
+    phaseDetails.style.display = 'block';
   }
 }
