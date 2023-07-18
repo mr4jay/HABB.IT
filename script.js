@@ -1,9 +1,4 @@
-function toggleDetails(index) {
-  const details = document.querySelectorAll(".phase-details");
-  details.forEach((item) => {
-    item.style.display = "none";
-  });
-
-  const selectedPhase = document.getElementById(`phase${index}-details`);
-  selectedPhase.style.display = "block";
+function toggleDetails(phaseNumber) {
+  const phaseDetails = document.getElementById(`phase${phaseNumber}-details`);
+  phaseDetails.classList.toggle("active");
 }
