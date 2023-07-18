@@ -3,51 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documentation Steps Input</title>
+  <title>Conversation Project Plan</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Documentation Steps Input</h1>
+    <h1>Conversation Project</h1>
   </header>
 
+  <nav>
+    <ul>
+      <li><a href="#description">Project Description</a></li>
+      <li><a href="#mission-vision">Mission & Vision</a></li>
+      <li><a href="#phases">Project Phases</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <section>
+    <section id="description">
+      <h2>Project Description</h2>
+      <p>
+        The Conversation Project aims to create a cutting-edge stock buying app with integrated cryptocurrency functionality. 
+        Users can create wallets, buy stocks, and trade crypto tokens. The app empowers users to make informed investment decisions.
+      </p>
+    </section>
+
+    <section id="mission-vision">
+      <h2>Mission & Vision</h2>
+      <p>
+        <strong>Mission:</strong> To democratize financial access and enable users to participate in the global financial markets.
+      </p>
+      <p>
+        <strong>Vision:</strong> Empowering individuals to achieve financial freedom through innovative and secure investment solutions.
+      </p>
+    </section>
+
+    <section id="phases">
       <h2>Project Phases</h2>
+
       <div class="project-phases">
-        <!-- Phase 1 -->
-        <div class="project-phase">
+        <div class="project-phase" data-tooltip="Phase 1: Planning and Research" onclick="toggleDetails(1)">
           <h3>Phase 1</h3>
           <p>Duration: [Start Date] - [End Date]</p>
-          <form class="phase-form">
-            <label for="phase1-step1">Step 1:</label>
+        </div>
+        <div class="phase-details" id="phase1-details">
+          <h4>Documentation Steps:</h4>
+          <ol>
+            <li>Develop a comprehensive project plan outlining tasks, timelines, and resources.</li>
+            <li>Conduct in-depth research on technology, market trends, and user preferences.</li>
+            <li>Create initial documentation, including project scope, goals, and requirements.</li>
+            <li>Identify potential risks and mitigation strategies.</li>
+            <li>Formulate a project budget and resource allocation plan.</li>
+          </ol>
+          <a href="phase1_documentation.pdf" target="_blank" class="doc-btn">View Documentation</a>
+          <form class="custom-steps-form" id="phase1-form">
+            <label for="phase1-step1">Custom Step 1:</label>
             <input type="text" id="phase1-step1" name="phase1-step1" required>
-            <label for="phase1-step2">Step 2:</label>
+            <label for="phase1-step2">Custom Step 2:</label>
             <input type="text" id="phase1-step2" name="phase1-step2" required>
-            <!-- Add more input fields for Phase 1 steps -->
-            <button type="button" onclick="saveData('phase1')">Save</button>
+            <!-- Add more input fields for Phase 1 custom steps -->
+            <button type="button" onclick="saveCustomSteps('phase1')">Save Custom Steps</button>
           </form>
         </div>
 
-        <!-- Phase 2 -->
-        <div class="project-phase">
+        <div class="project-phase" data-tooltip="Phase 2: Crypto Token Development" onclick="toggleDetails(2)">
           <h3>Phase 2</h3>
           <p>Duration: [Start Date] - [End Date]</p>
-          <form class="phase-form">
-            <label for="phase2-step1">Step 1:</label>
+        </div>
+        <div class="phase-details" id="phase2-details">
+          <h4>Documentation Steps:</h4>
+          <ol>
+            <li>Finalize specifications for the crypto token, including token type and supply.</li>
+            <li>Design the token contract architecture and functionality.</li>
+            <li>Implement security measures to protect token holders.</li>
+            <li>Conduct internal code reviews and testing.</li>
+            <li>Deploy the token on the mainnet and verify the contract.</li>
+          </ol>
+          <a href="phase2_documentation.pdf" target="_blank" class="doc-btn">View Documentation</a>
+          <form class="custom-steps-form" id="phase2-form">
+            <label for="phase2-step1">Custom Step 1:</label>
             <input type="text" id="phase2-step1" name="phase2-step1" required>
-            <label for="phase2-step2">Step 2:</label>
+            <label for="phase2-step2">Custom Step 2:</label>
             <input type="text" id="phase2-step2" name="phase2-step2" required>
-            <!-- Add more input fields for Phase 2 steps -->
-            <button type="button" onclick="saveData('phase2')">Save</button>
+            <!-- Add more input fields for Phase 2 custom steps -->
+            <button type="button" onclick="saveCustomSteps('phase2')">Save Custom Steps</button>
           </form>
         </div>
 
         <!-- Add more phases here -->
-
+        
       </div>
     </section>
   </main>
+
+  <footer>
+    <p>&copy; 2023 Conversation Project. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
