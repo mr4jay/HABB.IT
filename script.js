@@ -1,30 +1,29 @@
-function toggleDetails(phaseNumber) {
-  const phaseDetails = document.getElementById(`phase${phaseNumber}-details`);
-  phaseDetails.classList.toggle('show');
+function toggleDetails(phaseId) {
+  const phaseDetails = document.getElementById(phaseId + '-details');
+  const stepsElement = document.getElementById(phaseId + '-steps');
+  const steps = getStepsForPhase(phaseId); // Replace this with your data retrieval logic
+
+  if (phaseDetails.classList.contains('hidden')) {
+    phaseDetails.classList.remove('hidden');
+    stepsElement.innerHTML = ''; // Clear existing steps
+    steps.forEach((step, index) => {
+      setTimeout(() => {
+        stepsElement.innerHTML += `<li class="typing-animation">${index + 1}. ${step}</li>`;
+      }, index * 1500); // Delay of 1.5 seconds between each step
+    });
+  } else {
+    phaseDetails.classList.add('hidden');
+  }
 }
 
-function saveCustomSteps(phase) {
-  const form = document.getElementById(`${phase}-form`);
-  const formData = new FormData(form);
-  const data = {};
-  formData.forEach((value, key) => {
-    data[key] = value;
-  });
-
-  // Replace the URL with your server endpoint for saving data
-  fetch('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
-    body: JSON.stringify(data),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
-  .then(response => response.json())
-  .then(result => {
-    alert(`Custom steps saved for ${phase}`);
-    form.reset();
-  })
-  .catch(error => {
-    console.error('Error saving data:', error);
-  });
+function getStepsForPhase(phaseId) {
+  // Replace this with your logic to retrieve documentation steps for each phase
+  // For now, return a placeholder list of steps
+  if (phaseId === 1) {
+    return ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5'];
+  } else if (phaseId === 2) {
+    return ['Step A', 'Step B', 'Step C', 'Step D', 'Step E'];
+  } else {
+    return []; // Return an empty array for other phases
+  }
 }
